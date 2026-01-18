@@ -14,52 +14,53 @@ Dynamic Knowledge Updates: Easily update and extend knowledge
 
 ```mermaid
 graph TB
-    A[Query: "Is RSA-2048 still secure?"] --> B[Query Parser]
+    A[User Query] --> B[Query Parser]
     B --> C{Semantic Analysis}
     
-    C --> D[Extract Keywords & Entities]
-    C --> E[Determine Query Intent]
+    C --> D[Extract Keywords]
+    C --> E[Determine Intent]
     
-    D --> F[Graph Traversal Module]
+    D --> F[Graph Query Builder]
     E --> F
     
-    subgraph "Cryptographic Knowledge Graph"
-        G1[Standards Nodes]
-        G2[Algorithm Nodes]
-        G3[Policy Nodes]
-        G4[Compliance Nodes]
-        G5[Best Practices Nodes]
+    subgraph "Knowledge Graph (Neo4j)"
+        G1[Standards: NIST, FIPS]
+        G2[Algorithms: RSA, ECC]
+        G3[Policies: Compliance Rules]
+        G4[Best Practices]
+        G5[Historical Data]
         
-        G1 -->|NIST SP 800-57| G2
-        G2 -->|RSA-2048| G4
-        G4 -->|FIPS 140-3| G5
-        G2 -->|Security Strength| G3
-        G3 -->|PCI DSS| G5
+        G1 -->|defines| G2
+        G2 -->|used_in| G3
+        G3 -->|references| G1
+        G2 -->|has_strength| G4
+        G5 -->|informs| G4
     end
     
-    F --> H[Retrieve Relevant Subgraph]
-    H --> I[Context Enrichment]
+    F --> H[Graph Traversal]
+    H --> I[Retrieve Connected Nodes]
     
-    subgraph "Vector Database"
-        J1[Embedded Standards Docs]
-        J2[Security Whitepapers]
-        J3[Compliance Regulations]
-        J4[Historical Incident Data]
+    subgraph "Vector Store (FAISS/Pinecone)"
+        J1[Embedded Docs]
+        J2[Whitepapers]
+        J3[Regulations]
+        J4[Incident Reports]
     end
     
-    I --> K[Semantic Search]
-    K --> L[Retrieve Top-K Chunks]
-    L --> M[Context Assembly]
+    I --> K[Node to Vector Mapping]
+    K --> L[Semantic Similarity Search]
+    L --> M[Retrieve Top Documents]
     
-    F --> N[Direct Graph Query Results]
-    M --> O[Combine Graph + Vector Results]
+    F --> N[Direct Graph Results]
+    M --> O[Combine: Graph + Vectors]
     N --> O
     
-    O --> P[Generate Comprehensive Answer]
-    P --> Q["Answer: RSA-2048 provides 112-bit security,<br/>acceptable until 2030 per NIST guidelines.<br/>Consider RSA-3072 for long-term use."]
+    O --> P[Context Assembly]
+    P --> Q[Generate Answer with Citations]
     
-    Q --> R[Update Query Cache]
-    Q --> S[Feedback Loop<br/>for Graph Enhancement]
+    Q --> R[Response to User]
+    Q --> S[Update Query Cache]
+    Q --> T[Learn from Feedback]
     
     style G1 fill:#e3f2fd
     style G2 fill:#fce4ec
