@@ -1,3 +1,51 @@
+# Policy Enforcement Architecture
+
+```mermaid
+flowchart TD
+    subgraph "Policy Enforcement Architecture"
+        A[Policy Repository] --> B[Policy Loader]
+        B --> C[Policy Cache<br/>Real-time Updates]
+        
+        subgraph "Guardrail Layers"
+            D[Input Validation<br/>Sanitization]
+            E[Process Validation<br/>Step-by-step]
+            F[Output Validation<br/>Result Verification]
+            G[Post-execution<br/>Compliance Check]
+        end
+        
+        subgraph "Policy Types"
+            H[Cryptographic Policies<br/>Key size, Algorithms]
+            I[Operational Policies<br/>Validity Periods]
+            J[Compliance Policies<br/>NIST, FIPS, PCI DSS]
+            K[Organizational Policies<br/>Custom Rules]
+        end
+        
+        C --> D
+        C --> E
+        C --> F
+        C --> G
+        
+        H --> C
+        I --> C
+        J --> C
+        K --> C
+    end
+    
+    subgraph "Policy Decision Flow"
+        Request[Process Request] --> Validate[Validate against Policies]
+        Validate --> Decision{Compliant?}
+        
+        Decision -->|Yes| Execute[Execute with Constraints]
+        Decision -->|No| Reject[Reject Request]
+        
+        Execute --> LogExec[Log Execution<br/>with Policy ID]
+        Reject --> LogReject[Log Rejection<br/>with Violation Details]
+        
+        LogExec --> Audit[Send to Audit System]
+        LogReject --> Audit
+    end
+```
+
 # 2.1 Policy Configuration Example
 
 ```
