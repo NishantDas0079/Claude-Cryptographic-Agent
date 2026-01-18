@@ -62,6 +62,70 @@
 └─────────────────────────────────────────────────────────────┘
 ```
 
+```
+flowchart TD
+    subgraph "User Interface Layer"
+        A[Human Operator] --> B[Admin Dashboard]
+        B --> C[API Gateway<br/>REST/gRPC]
+        C --> D[Audit Log Viewer]
+    end
+
+    subgraph "Claude Agent Core Layer"
+        E[Claude AI Agent] --> F{Agent Core Components}
+        F --> G[Task Planner<br/>& Orchestrator]
+        F --> H[Policy Engine<br/>& Guardrails]
+        F --> I[Context Manager<br/>& State Tracker]
+        
+        G --> J[Cryptographic Workflow<br/>Sequencer]
+        H --> K[Policy Validator]
+        I --> L[Session Context<br/>& History]
+    end
+
+    subgraph "Tool Integration Layer"
+        M[Tool Registry] --> N[Approved Tools]
+        N --> O[Key Generation Tools<br/>OpenSSL, PKCS#11]
+        N --> P[CSR Tools<br/>X.509 Library]
+        N --> Q[Certificate Tools<br/>CA Interface]
+        N --> R[Validation Tools<br/>Policy Checker]
+    end
+
+    subgraph "External PKI Systems"
+        S[Certificate Authority<br/>e.g., EJBCA, MS CA]
+        T[Crypto Vault<br/>e.g., HashiCorp Vault]
+        U[Hardware Security Module<br/>HSM]
+        V[Key Management System<br/>KMS]
+    end
+
+    subgraph "Data & Compliance Layer"
+        W[Audit Log Database<br/>Immutable Storage]
+        X[Certificate Inventory<br/>CMDB]
+        Y[Policy Repository<br/>JSON/YAML]
+        Z[Compliance Dashboard]
+    end
+
+    %% Connections between layers
+    C --> E
+    E --> M
+    
+    O --> S
+    O --> T
+    O --> U
+    
+    P --> S
+    Q --> S
+    
+    R --> Y
+    
+    G --> W
+    H --> W
+    
+    Q --> X
+    
+    W --> Z
+    X --> Z
+```
+
+
 # Core Components
 # 1. Claude Agent
 Purpose: Main orchestrator and decision-maker
