@@ -1,3 +1,22 @@
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     Deployment Environment                   │
+├─────────────────────────────────────────────────────────────┤
+│  Container: Claude Agent + Policy Engine                    │
+│  Container: MCP Server + Tool Adapters                      │
+│  Container: Multi-Agent Coordinator                         │
+│                                                             │
+│  External Dependencies:                                     │
+│  - HashiCorp Vault (Key Management)                        │
+│  - EJBCA/Step-CA (Certificate Authority)                   │
+│  - PostgreSQL (Inventory & Audit Database)                  │
+│  - Neo4j (Knowledge Graph)                                  │
+│  - ELK Stack (Monitoring & Logging)                         │
+└─────────────────────────────────────────────────────────────┘
+```
+
+
 # 3. Deployment Configuration
 # 3.1 Docker Compose Setup
 
