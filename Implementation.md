@@ -504,7 +504,7 @@ class AuditLogger:
 
 # 2.5 Example Workflow: Certificate Issuance
 
-```
+```mermaid
 flowchart TD
     Start([Request Certificate]) --> Auth[Authenticate Requestor]
     Auth --> CheckEntitlement{Has Certificate<br/>Request Permission?}
