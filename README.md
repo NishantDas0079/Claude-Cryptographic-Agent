@@ -1,3 +1,17 @@
+Documentation	Purpose	Key Sections
+Final-Decision.md	Architecture selection guide	Decision matrix, Recommendations, Comparative analysis
+Multi-Agent-Architecture.md	Core multi-agent system design	Agent roles, Communication protocol, Orchestration logic
+MCP.md	Model Context Protocol integration	MCP server implementation, Tool discovery, Safety features
+LangChain.md	LangChain framework integration	Agent framework, Memory management, LangGraph orchestration
+GraphRAG.md	Graph RAG system for knowledge management	Knowledge graph, Semantic search, CVE database integration
+Implementation.md	Practical implementation details	Policy enforcement, Code examples, Security safeguards
+Unified-System.md	Complete integrated system view	Full architecture, Workflow orchestration, Component integration
+Deployment.md	Deployment and operations guide	Environment setup, Kubernetes manifests, Scaling strategies
+Monitoring.md	Monitoring and observability	Audit logging, Alerting system, Performance metrics
+
+
+
+
 # 1. Architecture Design
 # System Architecture Diagram
 
