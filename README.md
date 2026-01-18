@@ -62,7 +62,7 @@
 └─────────────────────────────────────────────────────────────┘
 ```
 
-```
+```mermaid
 flowchart TD
     subgraph "User Interface Layer"
         A[Human Operator] --> B[Admin Dashboard]
