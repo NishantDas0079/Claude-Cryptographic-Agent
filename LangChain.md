@@ -79,6 +79,7 @@ graph LR
     style A4 fill:#ba68c8
 ```
 
+
 ```
 # agents/langchain_agents.py
 from langchain.agents import AgentExecutor, create_react_agent
@@ -289,5 +290,56 @@ class MultiAgentWorkflow:
         if "error" in state.get("results", {}).get("key_generation", {}):
             return "failure"
         return "success"
+```
+
+# LangChain VS Lang Graph
+
+```mermaid
+flowchart TD
+    subgraph A [LangChain]
+        direction LR
+        A1[Linear Chains] --> A2[Agents & Tools] --> A3[Prompt Templates] --> A4[Memory] --> A5[RAG Systems]
+    end
+
+    subgraph B [LangGraph]
+        direction LR
+        B1[StateGraph] --> B2[Nodes & Edges] --> B3[Conditional Logic] --> B4[State Management] --> B5[Checkpoints]
+    end
+
+    A -->|Comparison Aspect| C{Core Purpose}
+    B -->|Comparison Aspect| C
+    
+    C --> D["LangChain: LLM Application Framework<br>LangGraph: Stateful Multi-Agent Framework"]
+
+    D --> E["Key Paradigm<br>LangChain: Linear Pipelines<br>LangGraph: Graphs with Cycles"]
+    E --> F["State Management<br>LangChain: Minimal/Stateless<br>LangGraph: Built-in State"]
+    F --> G["Flow Control<br>LangChain: Sequential/Branching<br>LangGraph: Complex/Cycles/Parallel"]
+    G --> H["Persistence<br>LangChain: Limited<br>LangGraph: Built-in Checkpoints"]
+    H --> I["Learning Curve<br>LangChain: Moderate<br>LangGraph: Steeper"]
+    I --> J["Best For<br>LangChain: Simple LLM Apps<br>LangGraph: Complex Workflows"]
+```
+
+
+# When to choose Which?
+
+```mermaid
+flowchart TD
+    Start[Start: Choose Your Tool] --> Q1{Is your workflow linear?}
+    
+    Q1 -->|Yes| Q2{Need state persistence?}
+    Q1 -->|No| LangGraphChoice["Choose LangGraph<br>✅ Complex flows<br>✅ State management<br>✅ Multi-agent"]
+    
+    Q2 -->|No| LangChainSimple["Choose LangChain<br>✅ Simple chains<br>✅ Quick setup<br>✅ Chat/Q&A"]
+    Q2 -->|Yes| Q3{Need cycles/loops?}
+    
+    Q3 -->|No| LangChainAdvanced["Choose LangChain<br>✅ Linear with memory<br>✅ Standard RAG"]
+    Q3 -->|Yes| LangGraphChoice
+    
+    %% Styling
+    classDef langchain fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef langgraph fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    
+    class LangChainSimple,LangChainAdvanced langchain
+    class LangGraphChoice langgraph
 ```
 
