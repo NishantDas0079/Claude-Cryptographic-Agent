@@ -68,6 +68,7 @@ graph TB
     style G5 fill:#f3e5f5
 ```
 
+
 # 4.2 Knowledge Graph for Cryptography
 
 ```
