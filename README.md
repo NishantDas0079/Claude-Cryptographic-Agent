@@ -1,14 +1,16 @@
-Documentation	Purpose	Key Sections
-Final-Decision.md	Architecture selection guide	Decision matrix, Recommendations, Comparative analysis
-Multi-Agent-Architecture.md	Core multi-agent system design	Agent roles, Communication protocol, Orchestration logic
-MCP.md	Model Context Protocol integration	MCP server implementation, Tool discovery, Safety features
-LangChain.md	LangChain framework integration	Agent framework, Memory management, LangGraph orchestration
-GraphRAG.md	Graph RAG system for knowledge management	Knowledge graph, Semantic search, CVE database integration
-Implementation.md	Practical implementation details	Policy enforcement, Code examples, Security safeguards
-Unified-System.md	Complete integrated system view	Full architecture, Workflow orchestration, Component integration
-Deployment.md	Deployment and operations guide	Environment setup, Kubernetes manifests, Scaling strategies
-Monitoring.md	Monitoring and observability	Audit logging, Alerting system, Performance metrics
+## 📚 Documentation Index
 
+| Document | Description | Link |
+|----------|-------------|------|
+| Architecture Decision | Why we chose multi-agent | [Final-Decision.md](Final-Decision.md) |
+| Core Design | Multi-agent system architecture | [Multi-Agent-Architecture.md](Multi-Agent-Architecture.md) |
+| Tool Protocol | MCP integration | [MCP.md](MCP.md) |
+| Agent Framework | LangChain implementation | [LangChain.md](LangChain.md) |
+| Knowledge System | Graph RAG for cryptography | [GraphRAG.md](GraphRAG.md) |
+| Implementation | Code and configuration | [Implementation.md](Implementation.md) |
+| Complete System | Unified architecture | [Unified-System.md](Unified-System.md) |
+| Deployment | Setup and operations | [Deployment.md](Deployment.md) |
+| Monitoring | Observability and alerts | [Monitoring.md](Monitoring.md) |
 
 
 
