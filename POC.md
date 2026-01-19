@@ -1,3 +1,31 @@
+```
+┌─────────────────────────────────────┐
+│ POC Dashboard │
+│ ┌─────────────────────────────┐ │
+│ │ Interactive Demos │ │
+│ │ • Certificate Issuance │ │
+│ │ • Key Rotation │ │
+│ │ • Compliance Check │ │
+│ └─────────────┬───────────────┘ │
+└────────────────┼─────────────────────┘
+│
+┌───────────▼───────────┐
+│ Quick Start │
+│ ./quick-start.sh │
+└───────────┬───────────┘
+│
+┌───────────▼───────────┐
+│ Live Results │
+│ • Generated Certs │
+│ • Audit Logs │
+│ • Performance Metrics│
+└───────────────────────┘
+
+```
+
+
+
+
 # Minimal Viable POC Implementation
 # File: poc/minimal-demo.py
 
