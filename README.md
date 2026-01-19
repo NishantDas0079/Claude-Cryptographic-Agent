@@ -1,16 +1,19 @@
-## 📚 Documentation Index
+# 📚 Documentation Index
 
-| Document | Description | Link |
-|----------|-------------|------|
-| Architecture Decision | Why we chose multi-agent | [Final-Decision.md](Final-Decision.md) |
-| Core Design | Multi-agent system architecture | [Multi-Agent-Architecture.md](Multi-Agent-Architecture.md) |
-| Tool Protocol | MCP integration | [MCP.md](MCP.md) |
-| Agent Framework | LangChain implementation | [LangChain.md](LangChain.md) |
-| Knowledge System | Graph RAG for cryptography | [GraphRAG.md](GraphRAG.md) |
-| Implementation | Code and configuration | [Implementation.md](Implementation.md) |
-| Complete System | Unified architecture | [Unified-System.md](Unified-System.md) |
-| Deployment | Setup and operations | [Deployment.md](Deployment.md) |
-| Monitoring | Observability and alerts | [Monitoring.md](Monitoring.md) |
+| Document | Description | Key Sections |
+|----------|-------------|--------------|
+| **[Final-Decision.md](Final-Decision.md)** | Architecture selection guide | Decision matrices, Recommendations |
+| **[Multi-Agent-Architecture.md](Multi-Agent-Architecture.md)** | Core multi-agent design | Agent roles, Communication protocol |
+| **[Unified-System.md](Unified-System.md)** | Complete integrated system | Component integration, Workflows |
+| **[MCP.md](MCP.md)** | Tool protocol integration | MCP server, Tool discovery |
+| **[LangChain.md](LangChain.md)** | Agent framework | Agent orchestration, Memory management |
+| **[GraphRAG.md](GraphRAG.md)** | Knowledge system | Knowledge graph, Semantic search |
+| **[Implementation.md](Implementation.md)** | Practical implementation | Code examples, Policy enforcement |
+| **[Deployment.md](Deployment.md)** | Operations guide | Setup, Kubernetes, Scaling |
+| **[Monitoring.md](Monitoring.md)** | Observability | Audit logging, Alerting |
+| **[POC.md](POC.md)** | Proof of concept | Demos, Quick start |
+| **[Plugin.md](Plugin.md)** | Plugin system | Extensibility, Templates |
+
 
 
 
