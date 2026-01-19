@@ -1,3 +1,36 @@
+```
+┌─────────────────────────────────────────┐
+│ Plugin Manager │
+│ ┌─────────────────────────────────┐ │
+│ │ Registry & Discovery │ │
+│ └──────────────────┬──────────────┘ │
+└─────────────────────┼───────────────────┘
+│
+┌─────────────────┼─────────────────┐
+│ │ │
+┌───▼─────┐ ┌────▼────┐ ┌─────▼────┐
+│Compliance│ │ Security│ │Monitoring│
+│ Plugins │ │ Plugins │ │ Plugins │
+├──────────┤ ├─────────┤ ├──────────┤
+│• NIST │ │• CVE │ │• Expiry │
+│• PCI-DSS │ │• Vuln │ │• Audit │
+│• FIPS │ │ Scan │ │• Metrics │
+└──────────┘ └─────────┘ └──────────┘
+│
+┌───────▼───────┐
+│Integration │
+│Plugins │
+├───────────────┤
+│• AWS KMS │
+│• Let's Encrypt│
+│• Azure KeyVault│
+└───────────────┘
+
+```
+
+
+
+
 # Core Plugin Interface
 # File: plugins/core/base_plugin.py
 
